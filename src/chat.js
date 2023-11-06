@@ -9,8 +9,8 @@ export class Chat {
   }
 
   generatePrompt = (patch, ext) => {
-    return `review the below code ${ext} and help me do a brief code review for code smells, potential scalability issues, any bug risk and suggest improvements, don't add inneccesary comments if there is no improvement. answer me in ${ process.env.LANG || "english" }, be short and concise and do not add resume or any irrelevant information.
-${patch}
+  return `Bellow is the code patch, please help me do a brief code review, Answer me in ${ process.env.LANG || 'english' } if any bug risk or code smell is found and improvement suggestion are welcome, don't add repeat information or add resume or introduction in the answer, be short and concise. 
+  ${patch}
 `;
   };
 
